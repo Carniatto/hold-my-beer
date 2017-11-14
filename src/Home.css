@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400');
+
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome {
+  background: url('beerBackground.jpg') no-repeat center;
+  background-size: cover;
+  width: 100vw;
+  height: 70vh;
+  border-bottom: 40px solid #000;
+  display: flex;
+  text-align: center;
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 300;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.welcome-title {
+  text-align: center;
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  
+}
+
+.welcome-title span {
+  display: inline-block;
+  position: relative;
+}
+.welcome-title span:before,
+.welcome-title span:after {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid #FBAA19;
+  width: 100%;
+  top: 50%;
+}
+
+.welcome-title span:before {
+  right: 100%;
+  margin-right: 25px;  
+}
+
+.welcome-title span:after {
+  left: 100%;
+  margin-left: 25px;
+}
+
+.welcome-phrase {
+  max-width: 600px;
+  margin: auto;
+  color: #fff;
+  padding: 30px 0;
+  border-bottom: 3px solid #FBAA19;
+}
+
+.search-area {
+  height: 20vh;
+  display: flex;
+}
+
+.search-field {
+  margin: auto;
+  display: flex;
+  align-items: baseline;
+}
+
+.input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #FBAA19;
+  min-width: 350px;
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 14px;
+  text-overflow: ellipsis;
+}
+
+.search-button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: none;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+.search-button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.brand-container {
+  display: none;
+}
+
+.list-item {
+  margin: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  font-family: 'Roboto Mono', sans-serif;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.selected {
+  opacity: 1;
+  color: #FBAA19;
+}
