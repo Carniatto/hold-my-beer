@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {Route, Switch} from 'react-router-dom'
-import logo from './logo.svg';
+import logo from './Assets/logo.svg';
 import './App.css';
-import Home from "./Home";
-import Products from "./Products";
+import Home from "./Pages/Home/Home";
+import Products from "./Pages/Products/Products";
 
 class App extends Component {
   render() {
@@ -15,7 +15,7 @@ class App extends Component {
           <main className="App-content">
             <Switch>
               <Route exact path="/" component={Home}/>
-              <Route path="/products" component={Products}/>
+              <Route path="/products/:id" component={Products}/>
             </Switch>
           </main>
           <footer className="App-footer">

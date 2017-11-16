@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400');
+
+.card-area {
+  display: flex;
+  width: 90vw;
+  max-width: 1080px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  padding: 50px 0;
+}
+.card {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  margin: 30px;
+  box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: left;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fefefe;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card h1 {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.price {
+  font-size: 1.5em;
+}
+
+.add {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  text-align: right;
+  color: #FBAA19;
+  font-size: 30px;
+  margin: 0 10px;
+  transition: 0.2s;
+  opacity: 0.7;
+  border-radius: 50px;
+  align-self: flex-end;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.side-menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0px;
+  right: 0px;
+  padding: 40px 20px;
+  width: 200px;
+  text-align: right;
+  font-family: 'Roboto Mono', sans-serif;
+  z-index: 9999;
+  font-size: 12px;
+  background: linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,0.2));
+  height: 100%;
+  transition: 0.2s;
+}
+
+.add {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  text-align: right;
+  color: #FBAA19;
+  font-size: 30px;
+  margin: 0 10px;
+  transition: 0.2s;
+  opacity: 0.7;
+  border-radius: 50px;
+  align-self: flex-end;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.remove {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  text-align: right;
+  color: #FBAA19;
+  font-size: 30px;
+  margin: 0 10px;
+  transition: 0.2s;
+  opacity: 0.7;
+  border-radius: 50px;
+  align-self: flex-end;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.add:hover, .remove:hover {
+  opacity: 1;
+  cursor: pointer;
+  background-color: rgba(255,255,255,0.3);
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+}
+
+.count {
+  font-size: 15px;
+  color: #FBAA19;
+}
+
+.total {
+  border-top: 1px solid dimgray;
+}

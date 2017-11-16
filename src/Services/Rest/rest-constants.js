@@ -38,10 +38,25 @@ const POC_QUERY = `query pocSearchMethod($now: DateTime!, $algorithm: String!, $
       }
     }`;
 
+const PRODUCTS_QUERY = `query pocCategorySearch($id: ID!, $search: String!, $categoryId: Int!) {
+      poc(id: $id) {
+        products(categoryId: $categoryId, search: $search) {
+          productVariants{
+            inventoryItemId
+            title
+            description
+            imageUrl
+            price
+          }
+        }
+      }
+    }`;
+
 const REST_CONSTANTS = {
   API_KEY,
   GRAPHQL_URL,
-  POC_QUERY
+  POC_QUERY,
+  PRODUCTS_QUERY
 };
 
 export default REST_CONSTANTS;

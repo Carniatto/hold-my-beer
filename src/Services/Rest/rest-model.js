@@ -38,6 +38,37 @@ class RestModelService {
       await response.json()
     ).data;
 
+  }
+
+  static async getProducts(id) {
+
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+
+    const variables = {
+      "id": id,
+      "search": "",
+      "categoryId": 0
+    };
+
+    const options = {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({
+        query: REST_CONSTANTS.PRODUCTS_QUERY,
+        variables
+      })
+    };
+
+    const response = await fetch(REST_CONSTANTS.GRAPHQL_URL, options);
+
+    return await (
+      await response.json()
+    ).data
+     .poc
+     .products
+     .map( p => p.productVariants.pop());
+
 
   }
 
